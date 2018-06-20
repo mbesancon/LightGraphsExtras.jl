@@ -67,10 +67,10 @@ include("adaptive_path.jl")
 Approximative comparison to deal with Float precision
 
 ```julia
-function ⪷{T<:AbstractFloat}(
+function ⪷(
   x::T,
   y::T
-  )
+  ) where T<:AbstractFloat
   return x ≈ y || x < y
 end
 ```
